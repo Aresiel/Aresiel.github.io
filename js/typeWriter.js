@@ -11,7 +11,8 @@ function TypeWriter(elmt) {
 		'I made it like this because it requires little to no effort and there was a handy JQuery plugin to use for the text.',
 		'I do some stuff when I want to and Philip is gay btw.',
 		'My tag on Discord is "Aresiel#0666".',
-		"There is an dialogue which will appear if you press enter but I didn't put anything special in it."
+		"There is an dialogue which will appear if you press enter but I didn't put anything special in it.",
+		"This is on Github pages btw, so the repo is <a href="https://github.com/Aresiel/Aresiel.github.io/">here</a>."
 	];
 	this.firstDelay = 1000;
 	this.typingDelay = 45;
