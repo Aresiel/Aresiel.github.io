@@ -3,3 +3,9 @@
 
 // prints "hi" in the browser's dev tools console
 console.log('hi');
+
+$(function() {
+				var typeWriter = new TypeWriter('#typeWriter');
+				
+				typeWriter.start();
+			});
