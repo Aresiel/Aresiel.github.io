@@ -1,3 +1,7 @@
+:root {
+    --anim-dur: 1.3s;
+}
+
 html {
     background-image: url("../background-website.gif");
     background-repeat: no-repeat;
@@ -9,4 +13,42 @@ html {
 
     min-width: 100vw;
     min-height: 100vh;
+}
+
+@keyframes fade_in_overlay {
+    0% {background-color: #0000}
+    75% {background-color: #0000}
+    100% {background-color: #000e}
+}
+
+@keyframes fade_in_div {
+    0% {opacity: 0}
+    75% {opacity: 0}
+    100% {opacity: 100%}
+}
+
+.terminal {
+    animation-name: fade_in_div;
+    animation-duration: calc(var(--anim-dur)*1.5);
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.bottom_row {
+    margin-top: auto;
+}
+
+body {
+    background-color: #000e;
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: unset;
+    animation-name: fade_in_overlay;
+    animation-duration: var(--anim-dur);
+    animation-fill-mode: forwards;
+
+    color:white;
 }
