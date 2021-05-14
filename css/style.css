@@ -1,0 +1,12 @@
+html {
+    background-image: url("../background-website.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    image-rendering: crisp-edges;
+
+    background-color: #000;
+
+    min-width: 100vw;
+    min-height: 100vh;
+}
