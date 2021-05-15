@@ -51,7 +51,7 @@ function runCommand(input){
         cmds[cmd](args)
 
     } else {
-        if(cmd == "")
+        if(cmd === "")
             return
         print(`No such command ${blue(cmd)} found.`)
     }
