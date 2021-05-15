@@ -1,7 +1,7 @@
 
-terminal_input = document.getElementById("terminal_input")
-terminal_content  = document.getElementById("terminal_content")
-terminal_prompt = document.getElementById("prompt")
+let terminal_input = document.getElementById("terminal_input")
+let terminal_content  = document.getElementById("terminal_content")
+let terminal_prompt = document.getElementById("prompt")
 
 let user = "guest"
 let path = "~"
@@ -49,7 +49,7 @@ function runCommand(input){
     print(getPrompt() + input)
     if(cmds[cmd]){
         cmds[cmd](args)
-
+        terminal_input.placeholder = ""
     } else {
         if(cmd === "")
             return
