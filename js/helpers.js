@@ -9,3 +9,7 @@ function green(text){
 function blue(text){
     return `<span style="color: var(--blue)">${text}</span>`
 }
+
+function underscore(text){
+    return `<span style="text-decoration: underline">${text}</span>`
+}

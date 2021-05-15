@@ -13,6 +13,7 @@ function promoteFlitz(){
 }
 
 function print(print){
+    print = print.replaceAll("\n", "<br>")
     terminal_content.innerHTML += `<span style="overflow-wrap: anywhere">${print}</span><br>`
     terminal_content.children[terminal_content.childElementCount-1].scrollIntoView()
 }
@@ -48,12 +49,12 @@ function runCommand(input){
 
     print(getPrompt() + input)
     if(cmds[cmd]){
-        cmds[cmd](args)
+        cmds[cmd][0](args)
         terminal_input.placeholder = ""
     } else {
         if(cmd === "")
             return
-        print(`No such command ${blue(cmd)} found.`)
+        print(`No such command ${red(cmd)} found.`)
     }
 }
 
@@ -67,3 +68,4 @@ terminal_input.addEventListener("keydown", event => {
 
 renderPrompt()
 terminal_input.focus()
+print(red("This is very incomplete and work in progress."))
