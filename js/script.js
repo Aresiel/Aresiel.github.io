@@ -1,13 +1,19 @@
 
 terminal_input = document.getElementById("terminal_input")
 terminal_content  = document.getElementById("terminal_content")
+terminal_prompt = document.getElementById("prompt")
+
+let user = "guest"
+let path = "~"
+let root = false
+let is_prompt = true
 
 function promoteFlitz(){
     prompt("Go add Flitz's bots.", "https://discordextremelist.xyz/en-US/en-us/bots/exorium")
 }
 
 function print(print){
-    terminal_content.innerHTML += `<span>${print}</span><br>`
+    terminal_content.innerHTML += `<span style="overflow-wrap: anywhere">${print}</span><br>`
     terminal_content.children[terminal_content.childElementCount-1].scrollIntoView()
 }
 
@@ -23,12 +29,11 @@ function getPrompt(){
     prompt += `<span style='color: var(--blue)'>:</span>`
     prompt += `<span>${path}</span>`
     prompt += `<span style='color: var(${root ? "--red" : "--blue"})'>$&gt;</span>`
-    return prompt
+    return is_prompt ? prompt : false
 }
 
 function renderPrompt(){
-    let prompt = document.getElementById("prompt")
-    prompt.innerHTML = getPrompt()
+    terminal_prompt.innerHTML = getPrompt()
 }
 
 function test(test){
@@ -44,6 +49,7 @@ function runCommand(input){
     print(getPrompt() + input)
     if(cmds[cmd]){
         cmds[cmd](args)
+
     } else {
         print(`No such command ${blue(cmd)} found.`)
     }
@@ -56,10 +62,6 @@ terminal_input.addEventListener("keydown", event => {
         terminal_input.value = ""
     }
 })
-
-user = "guest"
-path = "~"
-root = false
 
 renderPrompt()
 terminal_input.focus()

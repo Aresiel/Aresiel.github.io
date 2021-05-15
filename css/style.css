@@ -25,20 +25,20 @@ html {
     font-family: 'Fira Code', monospace;
 }
 
-@keyframes fade_in_overlay {
-    0% {background-color: #0000}
-    75% {background-color: #0000}
-    100% {background-color: #000e}
+@keyframes fade_in {
+    0% {background-color: #0000; opacity: 0;}
+    75% {background-color: #0000; opacity: 0;}
+    100% {background-color: #000e; opacity: 100%}
 }
 
-@keyframes fade_in_div {
-    0% {opacity: 0}
-    75% {opacity: 0}
-    100% {opacity: 100%}
+@keyframes fade_out {
+    0% {background-color: #000e; opacity: 100%}
+    75% {background-color: #0000; opacity: 0}
+    100% {background-color: #0000; opacity: 0}
 }
 
 #terminal {
-    animation-name: fade_in_div;
+    animation-name: fade_in;
     animation-duration: calc(var(--anim-dur)*1.5);
     animation-fill-mode: forwards;
     display: flex;
@@ -64,7 +64,7 @@ html {
 body {
     background-color: #000e;
     margin: unset;
-    animation-name: fade_in_overlay;
+    animation-name: fade_in;
     animation-duration: var(--anim-dur);
     animation-fill-mode: forwards;
 
