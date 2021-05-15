@@ -2,7 +2,7 @@ let cmds = {
     "clear": clear,
     "echo": echo,
     "flitz": flitz,
-    "exit": exit
+    "exit": exit,
 }
 
 function help(args){
