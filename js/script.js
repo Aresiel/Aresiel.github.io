@@ -22,7 +22,7 @@ function clear_screen(){
     terminal_content.innerHTML = ""
 }
 
-function getPrompt(){
+function getPrompt(text=""){
     let prompt = "";
     prompt += `<span style='color: var(--green)'>${user}</span>`
     prompt += `<span style='color: var(--blue)'>@</span>`
@@ -30,7 +30,7 @@ function getPrompt(){
     prompt += `<span style='color: var(--blue)'>:</span>`
     prompt += `<span>${path}</span>`
     prompt += `<span style='color: var(${root ? "--red" : "--blue"})'>$&gt;</span>`
-    return is_prompt ? prompt : false
+    return is_prompt ? prompt : text
 }
 
 function renderPrompt(){
