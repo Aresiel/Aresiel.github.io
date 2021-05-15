@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+:root {
+    --anim-dur: 1.3s;
+    --green: rgb(120, 198, 111);
+    --blue: rgb(98, 163, 222);
+    --red: rgb(229, 103, 103)
+}
+
 html {
     background-image: url("../background-website.gif");
     background-repeat: no-repeat;
@@ -6,7 +15,75 @@ html {
     image-rendering: crisp-edges;
 
     background-color: #000;
+    width: 100vw;
+    height: 100vh;
+}
 
-    min-width: 100vw;
-    min-height: 100vh;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+}
+
+@keyframes fade_in {
+    0% {background-color: #0000; opacity: 0;}
+    75% {background-color: #0000; opacity: 0;}
+    100% {background-color: #000e; opacity: 100%}
+}
+
+@keyframes fade_out {
+    0% {background-color: #000e; opacity: 100%}
+    75% {background-color: #0000; opacity: 0}
+    100% {background-color: #0000; opacity: 0}
+}
+
+#terminal {
+    animation-name: fade_in;
+    animation-duration: calc(var(--anim-dur)*1.5);
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+#footer {
+    display: flex;
+}
+
+#terminal_content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    margin: unset;
+    color:white;
+    width: 100%;
+    height: 100%;
+}
+
+.stealthy_input {
+    border: none;
+    color: white;
+    font-size: medium;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.stealthy_input:focus-visible {
+    outline: none;
+}
+
+table {
+    border-spacing: 0.5rem;
+}
+
+th {
+    text-align: left;
 }
