@@ -68,4 +68,4 @@ terminal_input.addEventListener("keydown", event => {
 
 renderPrompt()
 terminal_input.focus()
-print(red("This is very incomplete and work in progress."))
+print(red("This is very incomplete and work in progress. It will be done soon™."))
