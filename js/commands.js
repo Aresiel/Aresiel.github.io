@@ -1,7 +1,6 @@
 let cmds = {
     "clear": [clear, "Clear the terminal", "clear"],
     "echo": [echo, "Echo back arguments", "echo &lt;text&gt;"],
-    "flitz": [flitz, undefined, undefined, true],
     "exit": [exit, "Exit the terminal", "exit"],
     "help": [help, "View this message", "help"],
     "rickroll": [rickroll, undefined, undefined, true],
@@ -33,10 +32,6 @@ function clear(args){
 
 function echo(args){
     print(args.join(" "))
-}
-
-function flitz(args){
-    print(red("Not yet implemented"))
 }
 
 function rickroll(args){
