@@ -2,41 +2,28 @@
     color: unset !important;
     border: 2px solid;
     border-radius: 4px;
-    animation: rainbowColor 6s linear 0s infinite, rainbowBorder 6s linear 0s infinite !important;
+    animation: rainbow 6s linear 0s infinite !important;
   }
   
-  @keyframes rainbowBorder {
+  @keyframes rainbow {
     from {
       border-color: #6666ff !important;
-    }
-    10% {
-      border-color: #0099ff !important;
-    }
-    50% {
-      border-color: #00ff00 !important;
-    }
-    75% {
-      border-color: #ff3399 !important;
-    }
-    100% {
-      border-color: #6666ff !important;
-    }
-  }
-
-  @keyframes rainbowColor {
-    from {
       color: #6666ff !important;
     }
     10% {
+      border-color: #0099ff !important;
       color: #0099ff !important;
     }
     50% {
+      border-color: #00ff00 !important;
       color: #00ff00 !important;
     }
     75% {
+      border-color: #ff3399 !important;
       color: #ff3399 !important;
     }
     100% {
+      border-color: #6666ff !important;
       color: #6666ff !important;
     }
   }
