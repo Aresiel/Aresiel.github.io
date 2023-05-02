@@ -1,40 +1,42 @@
 * {
-    color: unset !important;  
+    color: unset !important;
+    border: 2px solid;
+    border-radius: 4px;
     animation: rainbowColor 6s linear 0s infinite, rainbowBorder 6s linear 0s infinite !important;
   }
   
   @keyframes rainbowBorder {
     from {
-      border-color: #6666ff;
+      border-color: #6666ff !important;
     }
     10% {
-      border-color: #0099ff;
+      border-color: #0099ff !important;
     }
     50% {
-      border-color: #00ff00;
+      border-color: #00ff00 !important;
     }
     75% {
-      border-color: #ff3399;
+      border-color: #ff3399 !important;
     }
     100% {
-      border-color: #6666ff;
+      border-color: #6666ff !important;
     }
   }
 
   @keyframes rainbowColor {
     from {
-      color: #6666ff;
+      color: #6666ff !important;
     }
     10% {
-      color: #0099ff;
+      color: #0099ff !important;
     }
     50% {
-      color: #00ff00;
+      color: #00ff00 !important;
     }
     75% {
-      color: #ff3399;
+      color: #ff3399 !important;
     }
     100% {
-      color: #6666ff;
+      color: #6666ff !important;
     }
   }
